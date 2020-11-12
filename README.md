@@ -1,5 +1,4 @@
-ExploreX
-A fictional responsive space exploration site.
+ExploreX is a fictional responsive space exploration site.
 
 Demo link: https://explorex09.netlify.app/
 
