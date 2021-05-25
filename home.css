@@ -1,0 +1,444 @@
+@import url('https://fonts.google.com/specimen/Ubuntu?sidebar.open=true&selection.family=Ubuntu:wght@500');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 180%;
+    color: #666;
+    text-align: center;
+}
+
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(315deg, #6617cb 0%, #882463 74%);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+.parallex1 {
+    background-image: url(img/space.webp);
+    opacity: 90%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.parallex2 {
+    background-image: url(img/AA1.jpg);
+    opacity: 80%;
+    min-height: 100%;
+}
+
+.parallex3 {
+    background-image: url(img/zero.jpg);
+    min-height: 40%;
+    opacity: 80%;
+}
+
+.parallex4 {
+    background-image: url(img/mars.jpg);
+    min-height: 100%;
+    opacity: 80%;
+}
+
+.parallex1, .parallex2, .parallex3, .parallex4{
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.heading{
+    position: absolute;
+    color: #fff;
+    font-size: 80px;
+    top: 38%;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-shadow: 0 0 10px #000;
+}
+
+.heading-sm {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px #000;
+}
+
+.two-col {
+    float: left;
+    width: 48%;
+    padding: 0 4%;
+    text-align: justify;
+    font-size: 20px;
+}
+
+section{
+    overflow: hidden;
+    padding: 50px 80px;
+}
+
+.dark{
+  overflow: auto;
+  padding: 50px 80px;
+  background-color: #323232;
+  color: #f2f2f2;
+  font-size: 20px;
+}
+
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 26px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.3;
+  background-color: #fff;
+  color: red;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid red;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+  z-index: 2;
+}
+#back-to-top-btn:hover, #back-to-top-btn:focus {
+  background-color: #03f718;
+  color: #fff;  
+}
+
+/* Animations */
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;  
+  animation-name: btnExit;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color:#323232;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+:root {
+  --link-size: 64px;
+  --trans-props: all 0.3s ease;
+  --link-size-footer-b: 40px;
+  --link-size-footer-s: 30px;
+}
+
+.social-icons {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.social-icon {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 50px;
+  height:50px;
+  margin: 8px;
+  background-color: wheat;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-icon i {
+  margin: auto;
+  font-size: 24px;
+  color: #111;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.social-icon:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transform: translate(0, 64px);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icon.github:after {
+  background-color: #24292e;
+}
+
+.social-icon.linkedin:after {
+  background-color: #0e76a8;
+}
+
+.social-icon.email:after {
+  background-color:#ff1a1a;
+}
+
+.social-icon.web:after {
+  background-color: #a717d3;
+}
+
+.social-icon:hover i {
+  color: #fff;
+}
+
+.social-icon:hover:after {
+  transform: translate(0) scale(1.2);
+}
+
+a:hover {
+  color: transparent;
+}
+
+
+
+
+
+::-webkit-scrollbar{
+  width: 12px;
+ }
+
+::-webkit-scrollbar-track {
+ border-radius: 6px;
+ background-color: white; 
+}
+
+::-webkit-scrollbar-thumb { 
+ background:  #f30f2d; 
+ border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover { 
+ background: #03f718; 
+}
+
+.container {
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container p {
+  font-size: 25px;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 8px;
+  animation: blink 1s infinite;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+.container p span.typed-text {
+  color: white;
+  font-weight: bolder;
+}
+
+@media(max-width: 768px) {
+    .heading{
+        font-size: 25px;
+        z-index: 1;
+    }
+    .heading-sm{
+        font-size: 180%;
+        z-index: 1;
+    }
+    .two-col{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        z-index: 1;
+    }
+
+}
+
+@media(max-width: 992px) {
+  #back-to-top-btn { font-size: 22px; width: 40px; height: 40px; bottom: 15px; right: 15px; }
+}
+@media(max-width:768px) {
+  #back-to-top-btn { font-size: 18px; width: 32px; height: 32px; bottom: 6px; right: 6px; }
+}
+
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* fadeOutDown */
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+}
+  
+@media (max-width: 920px) {
+  nav {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+  }
+    nav .logo{
+      align-items: center;
+      font-size: 30px;
+     padding-left: 50px;
+    }
+    nav .menu-btn i{
+      display: block;
+      z-index: 3;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    nav ul{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      /* background: #111; */
+      background: linear-gradient(315deg, #6617cb 0%, #882463 74%);
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+      z-index: 3;
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+      z-index: 3;
+    }
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      z-index: 3;
+    }
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+      z-index: 3;
+    }
+    nav ul li a.active,
+ nav ul li a:hover{
+    color: cyan;
+    box-shadow: none;
+  }
+    .parallex1 .heading .container p {
+      font-size: 15px;
+      padding: 0.5rem;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+      text-align: center;
+      overflow: hidden;
+    }
+}
+
+@keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+  }
